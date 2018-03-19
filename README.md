@@ -1,7 +1,7 @@
 # Rover-Project-One
 Rover Project
 
-The goals / steps of this project are the following:
+The goal of this project writeup is to demonstrate the code used to solve the rover project:
 
 Training / Calibration
 Download the simulator and take data in "Training Mode"
@@ -31,7 +31,8 @@ markdown or pdf.
 
 You're reading it!
 
-Notebook Analysis
+# Notebook Analysis
+# Autonomous Navigation and Mapping
 
 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have
 recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
