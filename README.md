@@ -3,15 +3,30 @@ Rover Project
 
 The goal of this project writeup is to demonstrate the code used to solve the rover project:
 
-Training / Calibration
-Download the simulator and take data in "Training Mode"
-Test out the functions in the Jupyter Notebook provided
-Add functions to detect obstacles and samples of interest(golden rocks)
-Fill in the process_image() function with the appropriate image processing steps (perspective transform, color threshold
-etc.) to get from raw image to a map. The output_image you create in this step should demonstrate that your mapping
-pipeline works.
-Use moviepy to process the images in your saved datadet with the process_image() function. Include the video you 
-produce as part of your submission.
+I downloaded the simulator and recorded data in "Training Mode"
+I tested out the functions in the Jupyter Notebook provided
+I added functions to detect obstacles and samples.
+I demonstrated my mapping pipeline by filling in the process_image() function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw image to a map. 
+I used moviepy to process the images in my saved datadet with the process_image() function. (See video below)
+
+# Notebook Analysis
+
+1. I ran the functions provided in the notebook on test images with the test data provided and with the test data I have recorded. I modified the functions to allow for color selection of obstacles.
+
+I selected two images from training data I recorded, one for testing the color filter on ground, and the other for a rock
+sample.
+
+Here are the above images after the perspective transform to top down view
+
+I modified the color_threshold function to include a rgb_thresh_max parameter, to set maximum values for the RGB thresholds in addition to the minimums. Here is the output on the same training images
+
+
+
+2. I populated the process_image() function with the appropriate analysis steps to map pixels identifying navigable
+terrain, obstacles and rock samples into a worldmap. I also ran process_image() on my test data using the moviepy functions
+provided to create video output of my results.
+
+# Autonomous Navigation and Mapping
 
 Autonomous Navigation / Mapping
 
@@ -31,24 +46,7 @@ markdown or pdf.
 
 You're reading it!
 
-# Notebook Analysis
-# Autonomous Navigation and Mapping
 
-1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have
-recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-
-I selected two images from training data I recorded, one for testing the color filter on ground, and the other for a rock
-sample.
-
-Here are the above images after the perspective transform to top down view
-
-I modified the color_threshold function to include a rgb_thresh_max parameter, to set maximum values for the RGB thresholds in addition to the minimums. Here is the output on the same training images
-
-And into rover-centric coordinates, with the mean angle drawn
-
-2. Populate the process_image() function with the appropriate analysis steps to map pixels identifying navigable
-terrain, obstacles and rock samples into a worldmap. Run process_image() on your test data using the moviepy functions
-provided to create video output of your results.
 
 Autonomous Navigation and Mapping
 
