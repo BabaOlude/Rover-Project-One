@@ -14,15 +14,9 @@ I used moviepy to process the images in my saved datadet with the process_image(
 1. I ran the functions provided in the notebook on test images with the test data provided and with the test data I have recorded. I modified the functions to allow for color selection of obstacles.
 
 I selected two images from training data I recorded, one for testing the color filter on ground, and the other for a rock
-sample.
+sample. To detect navigable areas, I used the default color threshold.
 
-Here are the above images after the perspective transform to top down view
-
-I modified the color_threshold function to include a rgb_thresh_max parameter, to set maximum values for the RGB thresholds in addition to the minimums. Here is the output on the same training images
-
-
-
-2. I populated the process_image() function with the appropriate analysis steps to map pixels identifying navigable
+I populated the process_image() function with the appropriate analysis steps to map pixels identifying navigable
 terrain, obstacles and rock samples into a worldmap. I also ran process_image() on my test data using the moviepy functions
 provided to create video output of my results.
 
@@ -36,17 +30,6 @@ Fill in the decision_step() function within the perception.py script with condit
 outputs of the perception_step() in deciding how to issue throttle, brake and steering commands.
 Iterate on your perception and decision function until your rover does a reasonable (need to define metric) job of navigating 
 and mapping.
-
-Rubirc Points
-Here I will consider the rubric points individually and describe how I addressed each point in my implementation.
-
-Writeup/README
-1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as
-markdown or pdf.
-
-You're reading it!
-
-
 
 Autonomous Navigation and Mapping
 
