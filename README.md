@@ -11,7 +11,7 @@ I used moviepy to process the images in my saved datadet with the process_image(
 
 # Notebook Analysis
 
-1. I ran the functions provided in the notebook on test images with the test data provided and with the test data I have recorded. I modified the functions to allow for color selection of obstacles.
+I ran the functions provided in the notebook on test images with the test data provided and with the test data I have recorded. I modified the functions to allow for color selection of obstacles.
 
 I selected two images from training data I recorded, one for testing the color filter on ground, and the other for a rock
 sample. To detect navigable areas, I used the default color threshold.
