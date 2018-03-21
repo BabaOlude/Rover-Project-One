@@ -20,6 +20,10 @@ I populated the process_image() function with the appropriate analysis steps to 
 terrain, obstacles and rock samples into a worldmap. I also ran process_image() on my test data using the moviepy functions
 provided to create video output of my results.
 
+```%%HTML
+<style> code {background-color : orange !important;} </style>
+```
+
 # Autonomous Navigation and Mapping
 
 Autonomous Navigation / Mapping
