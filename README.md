@@ -321,6 +321,4 @@ def process_image(img):
 In the decision_step function, I added a conditional check if the rover is currently picking up a sample, and if so to stop 
 any movement and set the mode to 'stop'.
 
-Resolution  = 
-
 My approach worked and covers the environment with ~85 % fidelity. My rover successfully see and pickup rock samples. 
