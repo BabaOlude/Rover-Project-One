@@ -309,7 +309,7 @@ def process_image(img):
     data.count += 1 # Keep track of the index in the Databucket()
     
     return output_image
-    ```
+```
     
 
 Autonomous Navigation and Mapping
