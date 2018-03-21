@@ -231,10 +231,15 @@ plt.arrow(0, 0, x_arrow, y_arrow, color='red', zorder=2, head_width=10, width=2)
 
 # Autonomous Navigation / Mapping
 
-I filled in the perception_step() function within the perception.py script with the appropriate image processing functions
-to create a map and update Rover() data. I filled in the decision_step() function within the perception.py script with conditional statements. I iterated on your perception and decision function until your rover does a reasonable (need to define metric) job of navigating 
-and mapping.
+Autonomous Navigation and Mapping
 
+Perception
+
+I filled in the perception_step() function within the perception.py script with the appropriate image processing functions
+to create a map and update Rover() data. I filled in the decision_step() function within the perception.py script with conditional statements. I iterated on your perception and decision functions until acheiving navigation and mapping.
+
+I the converted all three of the thresholded outputs (red, green, blue) into rover-centric coordinates. The navigable terrain
+and wall coordinates were transformed to world coordinates. The basic steps led me to my highest fidelity. Rock sample coordinates were used to check if there is a sample in the image. If a sample was in sight, the rovers mode was set in the decision_step. If no rock sample is present the coordinates stayed in polor coordinates.
 ```
 # Import pandas and read in csv file as a dataframe
 import pandas as pd
@@ -310,28 +315,11 @@ def process_image(img):
     
     return output_image
 ```
-    
 
-Autonomous Navigation and Mapping
-
-Perception
-
-The first change was to again add the rgb_thresh_max to the color_thresh function. In my perception_step function, I set
-the Rover.vision_image red channel to rock_sample color threshold output, green channel for walls, and blue channel for
-navigable terrain. I the converted all three of the thresholded outputs into rover-centric coordinates. The navigable terrain
-and wall coordinates were transformed to world coordinates, and applied as follows:
-
-Blue channel of worldmap received += 255 for all navigable terrain and -=255 for walls
-
-Red channel of worldmap receives +=255 for all walls and -=255 for navigable terrain
-
-I found that this method gave me the highest fidelity. Rock sample coordinates were used to check if there is a sample in the image. If a 
-sample was in sight, the rovers mode was set in the decision_step. If no rock sample is present the coordinates stayed in polor coordinates.
-
-Decision
+# Decision
 
 In the decision_step function, I added a conditional check if the rover is currently picking up a sample, and if so to stop 
-any movemoent and set the mode to 'stop'.
+any movement and set the mode to 'stop'.
 
 Resolution  = 
 
