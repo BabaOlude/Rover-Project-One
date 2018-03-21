@@ -35,6 +35,8 @@ import scipy.misc # For saving images as needed
 import glob  # For reading in a list of images from a folder
 ```
 
+Running test image data
+
 ```
 path = './test_dataset/IMG/*'
 img_list = glob.glob(path)
@@ -44,9 +46,22 @@ image = mpimg.imread(img_list[idx])
 plt.imshow(image)
 # Autonomous Navigation and Mapping
 ```
+Running my image data
+
+```
+path = '../Python Programs/IMG/*'
+img_list = glob.glob(path)
+# Grab a random image and display it
+idx = np.random.randint(0, len(img_list)-1)
+image = mpimg.imread(img_list[idx])
+plt.imshow(image)
+```
+
 ```
 <matplotlib.image.AxesImage at 0x7f95c4cc54a8>
 ```
+Running test calibration data
+
 ```
 # In the simulator you can toggle on a grid on the ground for calibration
 # You can also toggle on the rock samples with the 0 (zero) key.  
@@ -62,6 +77,25 @@ plt.imshow(grid_img)
 plt.subplot(122)
 plt.imshow(rock_img)
 ```
+
+Running my calibration data
+
+```
+# In the simulator you can toggle on a grid on the ground for calibration
+# You can also toggle on the rock samples with the 0 (zero) key.  
+# Here's an example of the grid and one of the rocks
+example_grid = '../Python Programs/example_grid1.jpg'
+example_rock = '../Python Programs/example_rock1.jpg'
+grid_img = mpimg.imread(example_grid)
+rock_img = mpimg.imread(example_rock)
+
+fig = plt.figure(figsize=(12,3))
+plt.subplot(121)
+plt.imshow(grid_img)
+plt.subplot(122)
+plt.imshow(rock_img)
+```
+
 ```
 # Define a function to perform a perspective transform
 # I've used the example grid image above to choose source points for the
