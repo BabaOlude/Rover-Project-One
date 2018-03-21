@@ -236,7 +236,7 @@ Autonomous Navigation and Mapping
 Perception
 
 I filled in the perception_step() function within the perception.py script with the appropriate image processing functions
-to create a map and update Rover() data. I filled in the decision_step() function within the perception.py script with conditional statements. I iterated on your perception and decision functions until acheiving navigation and mapping.
+to create a map and update Rover() data. I filled in the decision_step() function within the perception.py script with conditional statements. I iterated the perception and decision functions until acheiving navigation and mapping.
 
 I the converted all three of the thresholded outputs (red, green, blue) into rover-centric coordinates. The navigable terrain
 and wall coordinates were transformed to world coordinates. The basic steps led me to my highest fidelity. Rock sample coordinates were used to check if there is a sample in the image. If a sample was in sight, the rovers mode was set in the decision_step. If no rock sample is present the coordinates stayed in polor coordinates.
