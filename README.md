@@ -231,11 +231,8 @@ plt.arrow(0, 0, x_arrow, y_arrow, color='red', zorder=2, head_width=10, width=2)
 
 # Autonomous Navigation / Mapping
 
-Fill in the perception_step() function within the perception.py script with the appropriate image processing functions
-to create a map and update Rover() data (similar to what you did process_image() in the notebook).
-Fill in the decision_step() function within the perception.py script with conditional statements that take into consideration the 
-outputs of the perception_step() in deciding how to issue throttle, brake and steering commands.
-Iterate on your perception and decision function until your rover does a reasonable (need to define metric) job of navigating 
+I filled in the perception_step() function within the perception.py script with the appropriate image processing functions
+to create a map and update Rover() data. I filled in the decision_step() function within the perception.py script with conditional statements. I iterated on your perception and decision function until your rover does a reasonable (need to define metric) job of navigating 
 and mapping.
 
 ```
