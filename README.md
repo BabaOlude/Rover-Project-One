@@ -3,8 +3,8 @@ Rover Project
 
 The goal of this project writeup is to demonstrate the code used to solve the rover project:
 
-I downloaded the simulator and recorded data in "Training Mode"
-I tested out the functions in the Jupyter Notebook provided
+I downloaded the simulator and recorded data in "Training Mode".
+I tested out the functions in the Jupyter Notebook provided.
 I added functions to detect obstacles and samples.
 I demonstrated my mapping pipeline by filling in the process_image() function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw image to a map. 
 I used moviepy to process the images in my saved datadet with the process_image() function. (See video below)
