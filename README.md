@@ -35,7 +35,21 @@ import scipy.misc # For saving images as needed
 import glob  # For reading in a list of images from a folder
 ```
 
+```
+path = './test_dataset/IMG/*'
+img_list = glob.glob(path)
+# Grab a random image and display it
+idx = np.random.randint(0, len(img_list)-1)
+image = mpimg.imread(img_list[idx])
+plt.imshow(image)
 # Autonomous Navigation and Mapping
+```
+```
+<matplotlib.image.AxesImage at 0x7f95c4cc54a8>
+```
+Inline Style:
+![alt text](https://classroom.udacity.com/touch-ican.png)
+![alt text](https://classroom.udacity.com/images/icon_mentorship-78d06.svg)
 
 Autonomous Navigation / Mapping
 
